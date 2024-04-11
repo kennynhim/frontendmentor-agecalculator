@@ -1,0 +1,116 @@
+body {
+    background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    top: 25vh;
+}
+
+.content {
+    border: 1px solid red;
+    padding: 25px;
+}
+
+/* .input-group {
+    padding: 25px 0 25px 25px;
+} */
+
+.input-field {
+    float: left;
+}
+
+.input-field label {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: hsl(0, 1%, 44%);
+}
+
+.input-field input {
+    display: block;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+    padding: 10px 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 15px;
+}
+
+.button-group {
+    padding: 25px 0;
+}
+
+.button-group hr {
+    /* color: hsl(0, 0%, 86%); */
+    border-color: hsl(0, 0%, 86%);
+    display: inline-block;
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95vw;
+    }
+    .input-field {
+        width: 33.33%;
+    }
+    .input-field input {
+        width: 50%;
+    }
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 80vw;
+    }
+
+    .input-field {
+        width: 25%;
+    }
+
+    .input-field input {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 65vw;
+    }
+
+    .input-field input {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 50vw;
+    }
+
+    .input-field input {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 50vw;
+    }
+
+    .input-field input {
+        width: 80%;
+    }
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
