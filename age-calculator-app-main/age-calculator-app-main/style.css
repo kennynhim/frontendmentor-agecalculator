@@ -10,13 +10,8 @@ body {
 }
 
 .content {
-    border: 1px solid red;
     padding: 25px;
 }
-
-/* .input-group {
-    padding: 25px 0 25px 25px;
-} */
 
 .input-field {
     float: left;
@@ -40,29 +35,58 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    padding-left: 15px;
+    text-indent: 15px;
 }
 
 .button-group {
     padding: 25px 0;
+    position: relative;
+    width: 100%;
 }
 
 .button-group hr {
-    /* color: hsl(0, 0%, 86%); */
     border-color: hsl(0, 0%, 86%);
     display: inline-block;
-    width: 50%;
+    width: 85%;
+    z-index: 1;
+}
+
+.button-group button {
+    position: absolute;
+    right: 100px;
+    bottom: 12.5px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    z-index: 2;
+}
+
+.button-icon {
+    padding: 5px;
+    width: 25px;
+    height: 25px
 }
 
 @media (max-width: 600px) {
     .container {
         width: 95vw;
     }
+    .input-group {
+        width: 100%;
+    }
     .input-field {
-        width: 33.33%;
+        width: 33.3333%;
     }
     .input-field input {
-        width: 50%;
+        width: 100%;
+    }
+
+    .button-group hr {
+        width: 100%;
+    }
+
+    .button-group button {
+        right: calc(50% - 23.5px);
     }
 }
 
