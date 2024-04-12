@@ -26,32 +26,39 @@
             <div class="content">
                 <div class="input-group">
                     <div id="input-field-day" class="input-field">
-                        <label for="day"> DAY</label>
-                        <input id="day" type="number" min="1" />
+                        <label id="day-input-label" for="day"> DAY</label>
+                        <input id="day-input" type="number" min="1" max="31" />
+                        <p id="day-error-message" class="error-message">
+                            Missing
+                        </p>
                     </div>
                     <div id="input-field-month" class="input-field">
                         <label for="month">MONTH</label>
-                        <input id="month" type="number" min="1" max="12" />
+                        <input
+                            id="month-input"
+                            type="number"
+                            min="1"
+                            max="12"
+                        />
+                        <p id="month-error-message" class="error-message"></p>
                     </div>
                     <div id="input-field-year" class="input-field">
                         <label for="year">YEAR</label>
-                        <input id="year" type="number" min="1900" />
+                        <input id="year-input" type="number" min="0" />
+                        <p id="year-error-message" class="error-message"></p>
                     </div>
                     <br style="clear: both" />
                 </div>
                 <div class="button-group">
                     <hr />
-                    <button>
-                        <img
-                            class="button-icon"
-                            src="icon-arrow.svg"
-                        />
+                    <button id="calculate-button">
+                        <img class="button-icon" src="icon-arrow.svg" />
                     </button>
                 </div>
                 <div class="age-display-group">
-                    <div><span>--</span> years</div>
-                    <div><span>--</span> months</div>
-                    <div><span>--</span> days</div>
+                    <div><span class="age-numeric">--</span> years</div>
+                    <div><span class="age-numeric">--</span> months</div>
+                    <div><span class="age-numeric">--</span> days</div>
                 </div>
             </div>
         </div>
@@ -63,5 +70,6 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Kenny Nhim</a>.
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

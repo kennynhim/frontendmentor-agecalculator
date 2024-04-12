@@ -7,10 +7,11 @@ body {
     background-color: white;
     position: relative;
     top: 25vh;
+    border-radius: 20px 20px 200px 20px;
 }
 
 .content {
-    padding: 25px;
+    padding: 35px 25px;
 }
 
 .input-group {
@@ -41,11 +42,22 @@ body {
     font-weight: 700;
     font-style: normal;
     text-indent: 15px;
+    width: 100%;
     max-width: 125px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    display: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    color: hsl(0, 100%, 67%);
 }
 
 .button-group {
-    padding: 25px 0;
+    padding: 50px 0;
     position: relative;
     width: 100%;
 }
@@ -60,17 +72,34 @@ body {
 .button-group button {
     position: absolute;
     right: 100px;
-    bottom: 12.5px;
+    bottom: 30px;
     border-radius: 50%;
     border: none;
     background-color: hsl(259, 100%, 65%);
     z-index: 2;
+    width: 60px;
+    height: 60px;
 }
 
 .button-icon {
     padding: 5px;
-    width: 25px;
-    height: 25px
+    width: 30px;
+    height: 30px;
+}
+
+.age-display-group span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 60px;
+    color: hsl(259, 100%, 65%);
+}
+
+.age-display-group div:not(.age-numeric) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 60px;
 }
 
 @media (max-width: 600px) {
@@ -82,9 +111,6 @@ body {
     }
     .input-field {
         width: calc(31.5%);
-    }
-    .input-field input {
-        width: 100%;
     }
     #input-field-day {
         margin-right: 10px;
@@ -111,39 +137,57 @@ body {
         width: 25%;
     }
 
-    /* .input-field input {
-        width: 50%;
-    } */
+    .button-group hr {
+        width: 100%;
+    }
+
+    .button-group button {
+        right: calc(50% - 23.5px);
+    }
 }
 
 @media (min-width: 768px) {
     .container {
         width: 65vw;
     }
+    .content {
+        padding: 45px;
+    }
+    .input-group {
+        width: 80%;
+    }
 
-    /* .input-field input {
-        width: 60%;
-    } */
+    #input-field-day {
+        margin-right: 5px;
+    }
+    #input-field-month {
+        margin-right: 5px;
+    }
+    .button-group hr {
+        width: 99%;
+    }
+    .button-group button {
+        right: 0;
+        bottom: 25px;
+        width: 75px;
+        height: 75px;
+    }
+    .button-icon {
+        width: 37.5px;
+        height: 37.5px;
+    }
 }
 
 @media (min-width: 992px) {
     .container {
         width: 50vw;
     }
-
-    /* .input-field input {
-        width: 70%;
-    } */
 }
 
 @media (min-width: 1200px) {
     .container {
         width: 50vw;
     }
-
-    /* .input-field input {
-        width: 80%;
-    } */
 }
 
 .attribution {
