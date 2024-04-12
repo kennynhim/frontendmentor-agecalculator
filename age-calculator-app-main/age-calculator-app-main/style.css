@@ -13,6 +13,11 @@ body {
     padding: 25px;
 }
 
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
 .input-field {
     float: left;
 }
@@ -36,6 +41,7 @@ body {
     font-weight: 700;
     font-style: normal;
     text-indent: 15px;
+    max-width: 125px;
 }
 
 .button-group {
@@ -75,10 +81,16 @@ body {
         width: 100%;
     }
     .input-field {
-        width: 33.3333%;
+        width: calc(31.5%);
     }
     .input-field input {
         width: 100%;
+    }
+    #input-field-day {
+        margin-right: 10px;
+    }
+    #input-field-month {
+        margin-right: 10px;
     }
 
     .button-group hr {
@@ -99,9 +111,9 @@ body {
         width: 25%;
     }
 
-    .input-field input {
+    /* .input-field input {
         width: 50%;
-    }
+    } */
 }
 
 @media (min-width: 768px) {
@@ -109,9 +121,9 @@ body {
         width: 65vw;
     }
 
-    .input-field input {
+    /* .input-field input {
         width: 60%;
-    }
+    } */
 }
 
 @media (min-width: 992px) {
@@ -119,9 +131,9 @@ body {
         width: 50vw;
     }
 
-    .input-field input {
+    /* .input-field input {
         width: 70%;
-    }
+    } */
 }
 
 @media (min-width: 1200px) {
@@ -129,9 +141,9 @@ body {
         width: 50vw;
     }
 
-    .input-field input {
+    /* .input-field input {
         width: 80%;
-    }
+    } */
 }
 
 .attribution {
