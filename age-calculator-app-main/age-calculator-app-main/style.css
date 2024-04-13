@@ -5,8 +5,7 @@ body {
 .container {
     margin: 0 auto;
     background-color: white;
-    position: relative;
-    top: 25vh;
+    margin-top: 25vh;
     border-radius: 20px 20px 200px 20px;
 }
 
@@ -31,6 +30,7 @@ body {
     font-size: 10px;
     letter-spacing: 2px;
     color: hsl(0, 1%, 44%);
+    padding-bottom: 8px;
 }
 
 .input-field input {
@@ -41,10 +41,26 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
+    font-size: 20px;
     text-indent: 15px;
     width: 100%;
     max-width: 125px;
     box-sizing: border-box;
+    caret-color: hsl(259, 100%, 65%);
+}
+
+.input-field input:focus {
+    outline-color: hsl(259, 100%, 65%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 .error-color {
@@ -90,6 +106,11 @@ body {
     height: 60px;
 }
 
+.button-group button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
 .button-icon {
     padding: 5px;
     width: 30px;
@@ -100,7 +121,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-style: italic;
-    font-size: 60px;
+    font-size: 50px;
     color: hsl(259, 100%, 65%);
 }
 
@@ -108,10 +129,24 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-style: italic;
-    font-size: 60px;
+    font-size: 50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 280px) {
+    .button-group button {
+        right: calc(50% - 23.5px);
+    }
+
+    .age-display-group span {
+        font-size: 30px;
+    }
+
+    .age-display-group div:not(.age-numeric) {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 280px) {
     .container {
         width: 95vw;
     }
@@ -185,6 +220,12 @@ body {
         width: 37.5px;
         height: 37.5px;
     }
+    .age-display-group span {
+        font-size: 60px;
+    }
+    .age-display-group div:not(.age-numeric) {
+        font-size: 60px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -193,13 +234,6 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        width: 50vw;
-    }
-}
-
 .attribution {
-    position: fixed;
-    bottom: 0;
+    margin-top: 20px;
 }
