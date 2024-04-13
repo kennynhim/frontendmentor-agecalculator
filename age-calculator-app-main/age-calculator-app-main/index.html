@@ -28,12 +28,10 @@
                     <div id="input-field-day" class="input-field">
                         <label id="day-input-label" for="day"> DAY</label>
                         <input id="day-input" type="number" min="1" max="31" />
-                        <p id="day-error-message" class="error-message">
-                            Missing
-                        </p>
+                        <p id="day-error-message" class="error-message"></p>
                     </div>
                     <div id="input-field-month" class="input-field">
-                        <label for="month">MONTH</label>
+                        <label id="month-input-label" for="month">MONTH</label>
                         <input
                             id="month-input"
                             type="number"
@@ -43,7 +41,7 @@
                         <p id="month-error-message" class="error-message"></p>
                     </div>
                     <div id="input-field-year" class="input-field">
-                        <label for="year">YEAR</label>
+                        <label id="year-input-label" for="year">YEAR</label>
                         <input id="year-input" type="number" min="0" />
                         <p id="year-error-message" class="error-message"></p>
                     </div>
@@ -56,9 +54,9 @@
                     </button>
                 </div>
                 <div class="age-display-group">
-                    <div><span class="age-numeric">--</span> years</div>
-                    <div><span class="age-numeric">--</span> months</div>
-                    <div><span class="age-numeric">--</span> days</div>
+                    <div><span id="age-years" class="age-numeric">--</span> years</div>
+                    <div><span id="age-months" class="age-numeric">--</span> months</div>
+                    <div><span id="age-days" class="age-numeric">--</span> days</div>
                 </div>
             </div>
         </div>
@@ -70,6 +68,7 @@
                 >Frontend Mentor</a
             >. Coded by <a href="#">Kenny Nhim</a>.
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

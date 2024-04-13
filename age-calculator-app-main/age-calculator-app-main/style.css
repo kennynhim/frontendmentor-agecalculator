@@ -47,6 +47,14 @@ body {
     box-sizing: border-box;
 }
 
+.error-color {
+    color: hsl(0, 100%, 67%) !important;
+}
+
+.error-border-color {
+    border-color: hsl(0, 100%, 67%) !important;
+}
+
 .error-message {
     display: none;
     font-family: "Poppins", sans-serif;
@@ -54,6 +62,7 @@ body {
     font-style: italic;
     font-size: 12px;
     color: hsl(0, 100%, 67%);
+    width: 100%;
 }
 
 .button-group {
